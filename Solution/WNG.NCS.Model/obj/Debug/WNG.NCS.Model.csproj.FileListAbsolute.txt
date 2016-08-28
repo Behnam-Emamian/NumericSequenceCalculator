@@ -1,0 +1,5 @@
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\WNG.NCS.Model.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\WNG.NCS.Model.pdb
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.csprojResolveAssemblyReference.cache
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.pdb
