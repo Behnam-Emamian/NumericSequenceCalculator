@@ -24,3 +24,4 @@ Development (CD)
     Model -> Nuget
     WebApi -> Nuget
     Web -> Azure
+    
