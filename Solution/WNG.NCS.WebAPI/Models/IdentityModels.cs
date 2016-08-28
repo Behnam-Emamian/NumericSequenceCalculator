@@ -29,5 +29,7 @@ namespace WNG.NCS.WebAPI.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WNG.NCS.Model.SequenceNumber> SequenceNumbers { get; set; }
     }
 }

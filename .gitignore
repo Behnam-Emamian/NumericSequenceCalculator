@@ -1,3 +1,5 @@
 Solution/Database/NCS_DB.mdf
 Solution/Database/NCS_DB_log.ldf
 packages
+bin
+obj

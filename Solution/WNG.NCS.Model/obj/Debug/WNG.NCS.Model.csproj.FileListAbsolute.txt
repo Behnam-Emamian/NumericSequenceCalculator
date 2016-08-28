@@ -3,3 +3,8 @@ D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\WN
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.dll
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\obj\Debug\WNG.NCS.Model.pdb
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\WNG.NCS.Model.dll.config
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\EntityFramework.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\EntityFramework.xml
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Model\bin\Debug\EntityFramework.SqlServer.xml

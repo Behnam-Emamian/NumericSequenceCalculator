@@ -453,3 +453,4 @@ D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Web\bin\uk-UA\Kend
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Web\bin\zh-CN\Kendo.Mvc.resources.dll
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Web\obj\Debug\WNG.NCS.Web.dll
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Web\obj\Debug\WNG.NCS.Web.pdb
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.Web\obj\Debug\WNG.NCS.Web.csprojResolveAssemblyReference.cache

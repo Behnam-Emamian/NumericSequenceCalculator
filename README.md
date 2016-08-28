@@ -1,13 +1,15 @@
 # NumericSequenceCalculator
 
 
-Datebase (NSC_DB)
+Datebase
     1.Install RedGate Source Control
     2.Create one new database "NSC_DB"
     3.Link new database to this folder: \Solution\Database\SourceControl
     4.Get latest changes
 
-WebAPI (http://localhost:151/)
+WebAPI
+    Local: localhost:151/swagger/ui/index
 
 
-Web (http://localhost:150/)
+Web
+    Local: http://localhost:150/

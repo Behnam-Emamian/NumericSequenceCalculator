@@ -13,10 +13,10 @@ namespace WNG.NCS.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NCS_DB : DbContext
+    public partial class Entities : DbContext
     {
-        public NCS_DB()
-            : base("name=NCS_DB")
+        public Entities()
+            : base("name=Entities")
         {
         }
     

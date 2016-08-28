@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="NCS_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="WNG.NCS.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="SequenceNumbers">
           <Key>
             <PropertyRef Name="SequenceNumberId" />
@@ -12,14 +12,14 @@
           <Property Name="SequenceNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Number" Type="int" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="NCS_DBModelStoreContainer">
+        <EntityContainer Name="WNGNCSModelStoreContainer">
           <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumbers" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="NCS_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="WNG.NCS.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="SequenceNumber">
           <Key>
             <PropertyRef Name="SequenceNumberId" />
@@ -27,7 +27,7 @@
           <Property Name="SequenceNumberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Number" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="NCS_DB" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumber" />
         </EntityContainer>
       </Schema>
@@ -35,9 +35,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NCS_DBModelStoreContainer" CdmEntityContainer="NCS_DB">
+        <EntityContainerMapping StorageEntityContainer="WNGNCSModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="SequenceNumbers">
-            <EntityTypeMapping TypeName="NCS_DBModel.SequenceNumber">
+            <EntityTypeMapping TypeName="WNG.NCS.Model.SequenceNumber">
               <MappingFragment StoreEntitySet="SequenceNumbers">
                 <ScalarProperty Name="SequenceNumberId" ColumnName="SequenceNumberId" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
