@@ -79,6 +79,11 @@ namespace WNG.NCS.WebAPI.Controllers
                 return BadRequest(ModelState);
             }
 
+            if (sequenceNumber.Number % 1 != 0)
+            {
+                return BadRequest(ModelState);
+            }
+
             db.SequenceNumbers.Add(sequenceNumber);
             db.SaveChanges();
 
