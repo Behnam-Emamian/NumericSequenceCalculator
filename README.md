@@ -11,7 +11,7 @@ Datebase
 WebAPI
     Local: http://localhost:151/swagger/ui/index
     DevInt:
-    UAT:
+    UAT: http://ncs-webapi.azurewebsites.net/swagger/ui/index
     Production:
 
 Web
