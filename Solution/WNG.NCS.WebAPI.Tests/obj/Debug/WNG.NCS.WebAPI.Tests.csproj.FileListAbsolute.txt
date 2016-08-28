@@ -62,3 +62,5 @@ D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\bin\D
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\obj\Debug\WNG.NCS.WebAPI.Tests.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\obj\Debug\WNG.NCS.WebAPI.Tests.dll
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\obj\Debug\WNG.NCS.WebAPI.Tests.pdb
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\bin\Debug\WebActivatorEx.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI.Tests\bin\Debug\Swashbuckle.Core.dll

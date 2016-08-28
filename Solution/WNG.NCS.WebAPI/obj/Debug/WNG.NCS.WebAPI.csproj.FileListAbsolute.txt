@@ -88,3 +88,5 @@ D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\bin\System.
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\obj\Debug\WNG.NCS.WebAPI.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\obj\Debug\WNG.NCS.WebAPI.dll
 D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\obj\Debug\WNG.NCS.WebAPI.pdb
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\bin\Swashbuckle.Core.dll
+D:\Projects\GitHub\NumericSequenceCalculator\Solution\WNG.NCS.WebAPI\bin\WebActivatorEx.dll
