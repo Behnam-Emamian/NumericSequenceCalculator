@@ -6,8 +6,16 @@
     </Key>
     <Property Name="SequenceNumberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Number" Type="Int32" Nullable="false" />
+    <Property Name="IsOdd" Type="Boolean" Nullable="false" />
+    <Property Name="IsEven" Type="Boolean" Nullable="false" />
+    <Property Name="IsMultipleBy3" Type="Boolean" Nullable="false" />
+    <Property Name="IsMultipleBy5" Type="Boolean" Nullable="false" />
+    <Property Name="IsFibonacci" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumber" />
+    <FunctionImport Name="SequenceNumber_Insert">
+      <Parameter Name="Number" Mode="In" Type="Int32" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

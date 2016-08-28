@@ -16,5 +16,10 @@ namespace WNG.NCS.Model
     {
         public int SequenceNumberId { get; set; }
         public int Number { get; set; }
+        public bool IsOdd { get; set; }
+        public bool IsEven { get; set; }
+        public bool IsMultipleBy3 { get; set; }
+        public bool IsMultipleBy5 { get; set; }
+        public bool IsFibonacci { get; set; }
     }
 }

@@ -4,10 +4,23 @@
     <EntitySetMapping Name="SequenceNumbers">
       <EntityTypeMapping TypeName="WNG.NCS.Model.SequenceNumber">
         <MappingFragment StoreEntitySet="SequenceNumbers">
+          <ScalarProperty Name="IsFibonacci" ColumnName="IsFibonacci" />
+          <ScalarProperty Name="IsMultipleBy5" ColumnName="IsMultipleBy5" />
+          <ScalarProperty Name="IsMultipleBy3" ColumnName="IsMultipleBy3" />
+          <ScalarProperty Name="IsEven" ColumnName="IsEven" />
+          <ScalarProperty Name="IsOdd" ColumnName="IsOdd" />
           <ScalarProperty Name="SequenceNumberId" ColumnName="SequenceNumberId" />
           <ScalarProperty Name="Number" ColumnName="Number" />
         </MappingFragment>
       </EntityTypeMapping>
+      <EntityTypeMapping TypeName="WNG.NCS.Model.SequenceNumber">
+        <ModificationFunctionMapping>
+          <InsertFunction FunctionName="WNG.NCS.Model.Store.SequenceNumber_Insert">
+            <ScalarProperty Name="Number" ParameterName="Number" />
+          </InsertFunction>
+        </ModificationFunctionMapping>
+      </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SequenceNumber_Insert" FunctionName="WNG.NCS.Model.Store.SequenceNumber_Insert" />
   </EntityContainerMapping>
 </Mapping>

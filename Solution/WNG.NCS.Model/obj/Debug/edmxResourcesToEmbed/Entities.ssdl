@@ -6,7 +6,15 @@
     </Key>
     <Property Name="SequenceNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="IsOdd" Type="bit" Nullable="false" />
+    <Property Name="IsEven" Type="bit" Nullable="false" />
+    <Property Name="IsMultipleBy3" Type="bit" Nullable="false" />
+    <Property Name="IsMultipleBy5" Type="bit" Nullable="false" />
+    <Property Name="IsFibonacci" Type="bit" Nullable="false" />
   </EntityType>
+  <Function Name="SequenceNumber_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Number" Type="int" Mode="In" />
+  </Function>
   <EntityContainer Name="WNGNCSModelStoreContainer">
     <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumbers" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
