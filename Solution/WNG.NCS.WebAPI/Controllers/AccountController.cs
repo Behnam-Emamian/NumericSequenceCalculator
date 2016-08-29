@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using WNG.NCS.WebAPI.Models;
-using WNG.NCS.WebAPI.Providers;
-using WNG.NCS.WebAPI.Results;
+using PersianProcess.NCS.WebAPI.Models;
+using PersianProcess.NCS.WebAPI.Providers;
+using PersianProcess.NCS.WebAPI.Results;
 
-namespace WNG.NCS.WebAPI.Controllers
+namespace PersianProcess.NCS.WebAPI.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

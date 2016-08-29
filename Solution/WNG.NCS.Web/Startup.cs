@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(WNG.NCS.Web.Startup))]
-namespace WNG.NCS.Web
+[assembly: OwinStartupAttribute(typeof(PersianProcess.NCS.Web.Startup))]
+namespace PersianProcess.NCS.Web
 {
     public partial class Startup
     {

@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
-using WNG.NCS.WebAPI.Areas.HelpPage.Models;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.Models;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.Controllers
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

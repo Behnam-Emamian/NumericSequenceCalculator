@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
 {
     public class EnumTypeModelDescription : ModelDescription
     {

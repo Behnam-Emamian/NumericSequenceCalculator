@@ -9,9 +9,9 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using WNG.NCS.WebAPI.Models;
+using PersianProcess.NCS.WebAPI.Models;
 
-namespace WNG.NCS.WebAPI.Providers
+namespace PersianProcess.NCS.WebAPI.Providers
 {
     public class ApplicationOAuthProvider : OAuthAuthorizationServerProvider
     {

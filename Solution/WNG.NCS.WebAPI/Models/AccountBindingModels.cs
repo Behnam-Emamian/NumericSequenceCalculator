@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
 
-namespace WNG.NCS.WebAPI.Models
+namespace PersianProcess.NCS.WebAPI.Models
 {
     // Models used as parameters to AccountController actions.
 

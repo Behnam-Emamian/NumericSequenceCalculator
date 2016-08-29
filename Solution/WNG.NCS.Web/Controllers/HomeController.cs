@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace WNG.NCS.Web.Controllers
+namespace PersianProcess.NCS.Web.Controllers
 {
     public class HomeController : Controller
     {

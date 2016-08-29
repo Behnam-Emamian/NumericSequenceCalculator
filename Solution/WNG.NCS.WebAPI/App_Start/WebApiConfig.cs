@@ -6,7 +6,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 
-namespace WNG.NCS.WebAPI
+namespace PersianProcess.NCS.WebAPI
 {
     public static class WebApiConfig
     {

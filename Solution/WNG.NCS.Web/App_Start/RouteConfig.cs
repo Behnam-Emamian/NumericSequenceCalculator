@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace WNG.NCS.Web
+namespace PersianProcess.NCS.Web
 {
     public class RouteConfig
     {

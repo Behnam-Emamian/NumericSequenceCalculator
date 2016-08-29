@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WNG.NCS.Web;
-using WNG.NCS.Web.Controllers;
+using PersianProcess.NCS.Web;
+using PersianProcess.NCS.Web.Controllers;
 
-namespace WNG.NCS.Web.Tests.Controllers
+namespace PersianProcess.NCS.Web.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

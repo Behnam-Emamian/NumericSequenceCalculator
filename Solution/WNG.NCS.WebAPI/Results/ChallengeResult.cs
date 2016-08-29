@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace WNG.NCS.WebAPI.Results
+namespace PersianProcess.NCS.WebAPI.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

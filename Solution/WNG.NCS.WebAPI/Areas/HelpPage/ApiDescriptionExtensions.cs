@@ -3,7 +3,7 @@ using System.Text;
 using System.Web;
 using System.Web.Http.Description;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage
 {
     public static class ApiDescriptionExtensions
     {

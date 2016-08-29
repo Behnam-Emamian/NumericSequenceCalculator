@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace WNG.NCS.Web.Models
+namespace PersianProcess.NCS.Web.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

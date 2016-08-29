@@ -5,9 +5,9 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.

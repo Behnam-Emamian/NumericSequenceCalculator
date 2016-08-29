@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reflection;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
 {
     internal static class ModelNameHelper
     {

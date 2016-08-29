@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WNG.NCS.Model
+namespace PersianProcess.NCS.Model
 {
     using System;
     using System.Collections.Generic;

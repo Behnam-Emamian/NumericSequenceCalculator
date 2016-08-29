@@ -2,7 +2,7 @@
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="WNGNCSModelStoreContainer" CdmEntityContainer="Entities">
     <EntitySetMapping Name="SequenceNumbers">
-      <EntityTypeMapping TypeName="WNG.NCS.Model.SequenceNumber">
+      <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
         <MappingFragment StoreEntitySet="SequenceNumbers">
           <ScalarProperty Name="IsFibonacci" ColumnName="IsFibonacci" />
           <ScalarProperty Name="IsMultipleBy5" ColumnName="IsMultipleBy5" />
@@ -13,14 +13,14 @@
           <ScalarProperty Name="Number" ColumnName="Number" />
         </MappingFragment>
       </EntityTypeMapping>
-      <EntityTypeMapping TypeName="WNG.NCS.Model.SequenceNumber">
+      <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
         <ModificationFunctionMapping>
-          <InsertFunction FunctionName="WNG.NCS.Model.Store.SequenceNumber_Insert">
+          <InsertFunction FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert">
             <ScalarProperty Name="Number" ParameterName="Number" />
           </InsertFunction>
         </ModificationFunctionMapping>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <FunctionImportMapping FunctionImportName="SequenceNumber_Insert" FunctionName="WNG.NCS.Model.Store.SequenceNumber_Insert" />
+    <FunctionImportMapping FunctionImportName="SequenceNumber_Insert" FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert" />
   </EntityContainerMapping>
 </Mapping>

@@ -11,7 +11,7 @@ using System.Web.Http.Description;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Generates model descriptions for given types.

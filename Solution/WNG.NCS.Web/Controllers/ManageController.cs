@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using WNG.NCS.Web.Models;
+using PersianProcess.NCS.Web.Models;
 
-namespace WNG.NCS.Web.Controllers
+namespace PersianProcess.NCS.Web.Controllers
 {
     [Authorize]
     public class ManageController : Controller

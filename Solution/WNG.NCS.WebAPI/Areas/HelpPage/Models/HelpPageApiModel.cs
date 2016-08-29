@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.Models
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

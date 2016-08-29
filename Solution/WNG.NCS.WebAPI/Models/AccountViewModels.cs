@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WNG.NCS.WebAPI.Models
+namespace PersianProcess.NCS.WebAPI.Models
 {
     // Models returned by AccountController actions.
 

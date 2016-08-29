@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
-namespace WNG.NCS.Web.Models
+namespace PersianProcess.NCS.Web.Models
 {
     public class IndexViewModel
     {

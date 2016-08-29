@@ -1,6 +1,6 @@
 using System;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Describes a type model.

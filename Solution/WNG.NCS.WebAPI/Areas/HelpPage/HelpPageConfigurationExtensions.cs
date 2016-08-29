@@ -11,10 +11,10 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
-using WNG.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
-using WNG.NCS.WebAPI.Areas.HelpPage.Models;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.ModelDescriptions;
+using PersianProcess.NCS.WebAPI.Areas.HelpPage.Models;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage
 {
     public static class HelpPageConfigurationExtensions
     {

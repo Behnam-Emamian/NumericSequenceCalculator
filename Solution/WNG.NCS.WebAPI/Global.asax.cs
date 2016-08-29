@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace WNG.NCS.WebAPI
+namespace PersianProcess.NCS.WebAPI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

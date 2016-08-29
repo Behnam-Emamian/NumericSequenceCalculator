@@ -9,8 +9,8 @@
     <ProjectGuid>{EC86CF97-EB76-4C97-9B23-24EDCB3F00E6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WNG.NCS.WebAPI.Tests</RootNamespace>
-    <AssemblyName>WNG.NCS.WebAPI.Tests</AssemblyName>
+    <RootNamespace>PersianProcess.NCS.WebAPI.Tests</RootNamespace>
+    <AssemblyName>PersianProcess.NCS.WebAPI.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -100,9 +100,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WNG.NCS.WebAPI\WNG.NCS.WebAPI.csproj">
+    <ProjectReference Include="..\WNG.NCS.WebAPI\NCS.WebAPI.csproj">
       <Project>{A08983B0-EA64-4347-B48D-9F5049AB09F2}</Project>
-      <Name>WNG.NCS.WebAPI</Name>
+      <Name>NCS.WebAPI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

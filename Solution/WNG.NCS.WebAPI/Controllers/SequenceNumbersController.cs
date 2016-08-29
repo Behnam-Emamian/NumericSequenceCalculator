@@ -8,9 +8,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
-using WNG.NCS.Model;
+using PersianProcess.NCS.Model;
 
-namespace WNG.NCS.WebAPI.Controllers
+namespace PersianProcess.NCS.WebAPI.Controllers
 {
     public class SequenceNumbersController : ApiController
     {

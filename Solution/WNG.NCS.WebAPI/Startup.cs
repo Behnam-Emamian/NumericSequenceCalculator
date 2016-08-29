@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(WNG.NCS.WebAPI.Startup))]
+[assembly: OwinStartup(typeof(PersianProcess.NCS.WebAPI.Startup))]
 
-namespace WNG.NCS.WebAPI
+namespace PersianProcess.NCS.WebAPI
 {
     public partial class Startup
     {

@@ -1,11 +1,11 @@
 using System.Web.Http;
 using WebActivatorEx;
-using WNG.NCS.WebAPI;
+using PersianProcess.NCS.WebAPI;
 using Swashbuckle.Application;
 
 [assembly: PreApplicationStartMethod(typeof(SwaggerConfig), "Register")]
 
-namespace WNG.NCS.WebAPI
+namespace PersianProcess.NCS.WebAPI
 {
     public class SwaggerConfig
     {
@@ -32,7 +32,7 @@ namespace WNG.NCS.WebAPI
                         // hold additional metadata for an API. Version and title are required but you can also provide
                         // additional fields by chaining methods off SingleApiVersion.
                         //
-                        c.SingleApiVersion("v1", "WNG.NCS.WebAPI");
+                        c.SingleApiVersion("v1", "PersianProcess.NCS.WebAPI");
 
                         // If your API has multiple versions, use "MultipleApiVersions" instead of "SingleApiVersion".
                         // In this case, you must provide a lambda that tells Swashbuckle which actions should be

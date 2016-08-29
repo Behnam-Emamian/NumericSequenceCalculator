@@ -13,7 +13,7 @@ using System.Web.Http.Description;
 using System.Xml.Linq;
 using Newtonsoft.Json;
 
-namespace WNG.NCS.WebAPI.Areas.HelpPage
+namespace PersianProcess.NCS.WebAPI.Areas.HelpPage
 {
     /// <summary>
     /// This class will generate the samples for the help page.

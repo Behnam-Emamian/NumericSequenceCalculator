@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace WNG.NCS.Web
+namespace PersianProcess.NCS.Web
 {
     public class BundleConfig
     {

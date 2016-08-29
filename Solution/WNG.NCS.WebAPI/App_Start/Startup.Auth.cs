@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using WNG.NCS.WebAPI.Providers;
-using WNG.NCS.WebAPI.Models;
+using PersianProcess.NCS.WebAPI.Providers;
+using PersianProcess.NCS.WebAPI.Models;
 
-namespace WNG.NCS.WebAPI
+namespace PersianProcess.NCS.WebAPI
 {
     public partial class Startup
     {
