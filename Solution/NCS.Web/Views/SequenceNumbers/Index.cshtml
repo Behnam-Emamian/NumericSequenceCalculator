@@ -1,0 +1,72 @@
+﻿
+@using Kendo.Mvc.UI
+
+@(Html.Kendo().Grid<PersianProcess.NCS.Model.SequenceNumber>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Number).Width(140);
+          columns.Bound(c => c.IsOdd).Width(140);
+          columns.Bound(c => c.IsEven).Width(140);
+          columns.Bound(c => c.IsMultipleBy3).Width(140);
+          columns.Bound(c => c.IsMultipleBy5).Width(140);
+          columns.Bound(c => c.IsFibonacci).Width(140);
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar =>
+      {
+          toolbar.Create();
+          toolbar.Excel();
+          toolbar.Pdf();
+      })
+      .ColumnMenu()
+      //.Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Navigatable()
+      .Selectable(selectable =>
+      {
+          selectable.Mode(GridSelectionMode.Single);
+          selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable =>
+      {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .Excel(excel => excel
+          .FileName("Kendo UI Grid Export.xlsx")
+          .Filterable(true)
+          .ProxyURL(Url.Action("Excel_Export_Save", "SequenceNumbers"))
+      )
+      .Pdf(pdf => pdf
+          .FileName("Kendo UI Grid Export.pdf")
+          .ProxyURL(Url.Action("Pdf_Export_Save", "SequenceNumbers"))
+      )
+      .Events(events =>
+      {
+          events.Save("onSave");
+          events.SaveChanges("onSaveChanges");
+      })
+      .DataSource(dataSource => dataSource
+          .WebApi()
+          .Model(model => model.Id(p => p.SequenceNumberId))
+          //.Read(read => read.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
+          .Read(read => read.Url("http://localhost:151/api/SequenceNumbers"))
+          .Create(create => create.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
+          .Update(update => update.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))
+          .Destroy(destroy => destroy.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))
+      )
+)
+
+<script>
+
+    function onSave(e) {
+        //Implement the event handler for Save
+    }
+
+    function onSaveChanges(e) {
+        //Implement the event handler for SaveChanges
+    }
+
+</script>
