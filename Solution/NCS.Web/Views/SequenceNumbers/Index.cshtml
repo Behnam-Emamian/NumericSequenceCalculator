@@ -52,7 +52,7 @@
           .WebApi()
           .Model(model => model.Id(p => p.SequenceNumberId))
           //.Read(read => read.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
-          .Read(read => read.Url("http://localhost:151/api/SequenceNumbers"))
+          .Read(read => read.Url("http://localhost:151/api/SequenceNumbers2"))
           .Create(create => create.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
           .Update(update => update.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))
           .Destroy(destroy => destroy.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))
