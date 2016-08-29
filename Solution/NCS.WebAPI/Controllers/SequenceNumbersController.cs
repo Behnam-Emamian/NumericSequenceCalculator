@@ -13,7 +13,6 @@ using System.Web.Http.Cors;
 
 namespace PersianProcess.NCS.WebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SequenceNumbersController : ApiController
     {
         private Entities db = new Entities();
