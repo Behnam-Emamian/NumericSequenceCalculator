@@ -9,9 +9,11 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using PersianProcess.NCS.Model;
+using System.Web.Http.Cors;
 
 namespace PersianProcess.NCS.WebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class SequenceNumbersController : ApiController
     {
         private Entities db = new Entities();
