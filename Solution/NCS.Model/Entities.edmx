@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PersianProcess.NCS.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SequenceNumbers">
+          <Key>
+            <PropertyRef Name="SequenceNumberId" />
+          </Key>
+          <Property Name="SequenceNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Number" Type="int" Nullable="false" />
+          <Property Name="IsOdd" Type="bit" Nullable="false" />
+          <Property Name="IsEven" Type="bit" Nullable="false" />
+          <Property Name="IsMultipleBy3" Type="bit" Nullable="false" />
+          <Property Name="IsMultipleBy5" Type="bit" Nullable="false" />
+          <Property Name="IsFibonacci" Type="bit" Nullable="false" />
+        </EntityType>
+        <Function Name="SequenceNumber_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Number" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="NCSModelStoreContainer">
+          <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumbers" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersianProcess.NCS.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SequenceNumber">
+          <Key>
+            <PropertyRef Name="SequenceNumberId" />
+          </Key>
+          <Property Name="SequenceNumberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Number" Type="Int32" Nullable="false" />
+          <Property Name="IsOdd" Type="Boolean" Nullable="false" />
+          <Property Name="IsEven" Type="Boolean" Nullable="false" />
+          <Property Name="IsMultipleBy3" Type="Boolean" Nullable="false" />
+          <Property Name="IsMultipleBy5" Type="Boolean" Nullable="false" />
+          <Property Name="IsFibonacci" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumber" />
+          <FunctionImport Name="SequenceNumber_Insert">
+            <Parameter Name="Number" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NCSModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="SequenceNumbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
+              <MappingFragment StoreEntitySet="SequenceNumbers">
+                <ScalarProperty Name="IsFibonacci" ColumnName="IsFibonacci" />
+                <ScalarProperty Name="IsMultipleBy5" ColumnName="IsMultipleBy5" />
+                <ScalarProperty Name="IsMultipleBy3" ColumnName="IsMultipleBy3" />
+                <ScalarProperty Name="IsEven" ColumnName="IsEven" />
+                <ScalarProperty Name="IsOdd" ColumnName="IsOdd" />
+                <ScalarProperty Name="SequenceNumberId" ColumnName="SequenceNumberId" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
+              <ModificationFunctionMapping>
+                <InsertFunction FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert">
+                  <ScalarProperty Name="Number" ParameterName="Number" />
+                </InsertFunction>
+              </ModificationFunctionMapping>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SequenceNumber_Insert" FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
