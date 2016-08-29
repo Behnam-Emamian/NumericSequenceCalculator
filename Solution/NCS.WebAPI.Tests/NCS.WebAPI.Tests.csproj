@@ -102,6 +102,12 @@
   <ItemGroup>
     <Folder Include="Controllers\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NCS.WebAPI\NCS.WebAPI.csproj">
+      <Project>{a08983b0-ea64-4347-b48d-9f5049ab09f2}</Project>
+      <Name>NCS.WebAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

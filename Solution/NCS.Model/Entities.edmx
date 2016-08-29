@@ -20,7 +20,7 @@
         <Function Name="SequenceNumber_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Number" Type="int" Mode="In" />
         </Function>
-        <EntityContainer Name="WNGNCSModelStoreContainer">
+        <EntityContainer Name="NCSModelStoreContainer">
           <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumbers" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -50,7 +50,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="WNGNCSModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="NCSModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="SequenceNumbers">
             <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
               <MappingFragment StoreEntitySet="SequenceNumbers">
