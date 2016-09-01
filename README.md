@@ -9,13 +9,13 @@ Datebase
     5.Run dummydata scripts in folder: \Solution\Database\DummyData\ 
 
 WebAPI
-    Local: http://localhost:151/swagger/ui/index
+    Local: http://localhost/NCS.WebAPI/swagger/ui/index
     DevInt:
     UAT: http://ncs-webapi.azurewebsites.net/swagger/ui/index
     Production:
 
 Web
-    Local: http://localhost:150/
+    Local: http://localhost/NCS.Web
     DevInt:
     UAT:
     Production:
