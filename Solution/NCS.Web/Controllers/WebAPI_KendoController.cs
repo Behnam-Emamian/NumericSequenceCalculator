@@ -15,7 +15,7 @@ using PersianProcess.NCS.Model;
 
 namespace PersianProcess.NCS.Web.Controllers
 {
-    public class SequenceNumbersController : Controller
+    public class WebAPI_KendoController : Controller
     {
         public ActionResult Index()
         {

@@ -1,31 +1,76 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Numeric Sequence Calculator - Introduction";
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Numeric Sequence Calculator</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>Goal</th>
+            <td>As a USER<br />
+                I want to calculate some numeric sequences so that [TBD].</td>
+        </tr>
+        <tr>
+            <th>Acceptance Criteria</th>
+            <td>1. The software shall be webbased.<br />
+                2. Unit tests shall be written for each functional component of the software.<br />
+                3. An endtoend UI test shall be written for the software.<br />
+                4. The source shall be saved to a github repository.<br />
+                5. Any instructions required to run the software shall be included in a README.md file in the root of the repository.<br />
+                6. The repository URL shall be supplied to World Nomads Group</td>
+        </tr>
+    </table>
+
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+    <div class="col-md-6">
+        <h2>S1 Instructions</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Story</th>
+                <td>As a USER<br />
+                    I want to read some instructions on how to use the application so that it works first time for me.</td>
+            </tr>
+            <tr>
+                <th>Acceptance Criteria</th>
+                <td>S1.1 The instructions shall be short and to the point.</td>
+            </tr>
+        </table>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>S2 Enter Data</h2>
+         <table class="table table-bordered">
+            <tr>
+                <th>Story</th>
+                <td>As a USER<br />
+                    I want to enter a number and initiate the calculation of the numeric sequences so that I can view the results.</tr>
+            <tr>
+                <th>Acceptance Criteria</th>
+                <td>S2.1 Input shall accept positive, whole numbers only. S2.2 Where an input is invalid an error message shall be displayed.</td>
+            </tr>
+        </table>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <div class="col-md-6">
+        <h2>S3 Results</h2>
+        <table class="table table-bordered">
+            <tr>
+                <th>Story</th>
+                <td>As a USER<br />
+                    I want to view the results of the numeric sequences so that [TBD].</tr>
+            <tr>
+                <th>Acceptance Criteria</th>
+                <td>S3.1 The following numeric sequences shall be displayed:<br />
+                    S3.1.1 All numbers up to and including the number entered,<br />
+                    S3.1.2 All odd numbers up to and including the number entered,<br />
+                    S3.1.3 All even numbers up to and including the number entered,<br />
+                    S3.1.4 All numbers up to and including the number entered, except when,<br />
+                    S3.1.4.1 A number is a multiple of 3 output C, and when,<br />
+                    S3.1.4.2 A number is a multiple of 5 output E, and when,<br />
+                    S3.1.4.3 A number is a multiple of both 3 and 5 output Z,<br />
+                    S3.1.5 All fibonacci number up to and including the number entered.</td>
+            </tr>
+        </table>
     </div>
 </div>
