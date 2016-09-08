@@ -28,6 +28,11 @@ namespace PersianProcess.NCS.Model
         }
     
         public virtual DbSet<SequenceNumber> SequenceNumbers { get; set; }
+        public virtual DbSet<EvenNumber> EvenNumbers { get; set; }
+        public virtual DbSet<FibonacciNumber> FibonacciNumbers { get; set; }
+        public virtual DbSet<MultipleBy3Numbers> MultipleBy3Numbers { get; set; }
+        public virtual DbSet<MultipleBy5Numbers> MultipleBy5Numbers { get; set; }
+        public virtual DbSet<OddNumber> OddNumbers { get; set; }
     
         public virtual int SequenceNumber_Insert(Nullable<int> number)
         {

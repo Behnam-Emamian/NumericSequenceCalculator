@@ -18,13 +18,15 @@ namespace PersianProcess.NCS.Web.Controllers
 
         public ActionResult Index()
         {
+            
             var Model = db.SequenceNumbers;
             return View(Model);
         }
 
         public ActionResult SequenceNumbers_Read([DataSourceRequest]DataSourceRequest request)
         {
-            IQueryable<SequenceNumber> sequencenumbers = db.SequenceNumbers;
+            //IQueryable<SequenceNumber> sequencenumbers = db.SequenceNumbers.OrderBy(Num => Num.Number);
+            IQueryable<SequenceNumber> sequencenumbers = db.SequenceNumbers.OrderBy(Num => Num.Number);
             DataSourceResult result = sequencenumbers.ToDataSourceResult(request, sequenceNumber => new {
                 SequenceNumberId = sequenceNumber.SequenceNumberId,
                 Number = sequenceNumber.Number,
@@ -45,12 +47,7 @@ namespace PersianProcess.NCS.Web.Controllers
             {
                 var entity = new SequenceNumber
                 {
-                    Number = sequenceNumber.Number,
-                    IsOdd = sequenceNumber.IsOdd,
-                    IsEven = sequenceNumber.IsEven,
-                    IsMultipleBy3 = sequenceNumber.IsMultipleBy3,
-                    IsMultipleBy5 = sequenceNumber.IsMultipleBy5,
-                    IsFibonacci = sequenceNumber.IsFibonacci
+                    Number = sequenceNumber.Number
                 };
 
                 db.SequenceNumbers.Add(entity);
@@ -77,7 +74,7 @@ namespace PersianProcess.NCS.Web.Controllers
                     IsFibonacci = sequenceNumber.IsFibonacci
                 };
 
-                db.SequenceNumbers.Attach(entity);
+                //db.SequenceNumbers.Attach(entity);
                 db.SequenceNumbers.Remove(entity);
                 db.SaveChanges();
             }
