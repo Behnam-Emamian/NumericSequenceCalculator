@@ -1,0 +1,45 @@
+﻿@using Kendo.Mvc.UI
+@using PersianProcess.NCS.Model
+@using System.Data.Entity
+@model DbSet<SequenceNumber>
+
+@(Html.Kendo().Grid<PersianProcess.NCS.Model.SequenceNumber>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+        columns.Bound(c => c.Number);
+        columns.Bound(c => c.IsOdd);
+        columns.Bound(c => c.IsEven);
+        columns.Bound(c => c.IsMultipleBy3);
+        columns.Bound(c => c.IsMultipleBy5);
+        columns.Bound(c => c.IsFibonacci);
+        columns.Command(command => { command.Destroy(); }).Width(100);
+      })
+      .ToolBar(toolbar => {
+            toolbar.Create();
+            toolbar.Excel();
+            toolbar.Pdf();
+      })
+      .ColumnMenu()
+      .Pageable()
+      .Navigatable()
+      .Selectable(selectable => {
+            selectable.Mode(GridSelectionMode.Single);
+            selectable.Type(GridSelectionType.Row);
+      })
+      .Sortable(sortable => {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable()
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.SequenceNumberId))
+          .Read(read => read.Action("SequenceNumbers_Read", "MVC_Kendo"))
+          .Create(create => create.Action("SequenceNumbers_Create", "MVC_Kendo"))
+          .Destroy(destroy => destroy.Action("SequenceNumbers_Destroy", "MVC_Kendo"))
+          
+      )
+)
+
+@Html.Partial("Odds", new Entities().OddNumbers)

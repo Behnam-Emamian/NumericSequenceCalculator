@@ -1,0 +1,8 @@
+﻿@model IEnumerable<PersianProcess.NCS.Model.OddNumber>
+
+<ul class="list-inline">
+    <li class="">Odds</li>
+    @foreach (var item in Model) {
+      <li class="">@item.Number</li>
+    }
+</ul>

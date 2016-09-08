@@ -1,5 +1,4 @@
-﻿
-@using Kendo.Mvc.UI
+﻿@using Kendo.Mvc.UI
 
 @(Html.Kendo().Grid<PersianProcess.NCS.Model.SequenceNumber>()
       .Name("grid")
@@ -11,7 +10,7 @@
           columns.Bound(c => c.IsMultipleBy3).Width(140);
           columns.Bound(c => c.IsMultipleBy5).Width(140);
           columns.Bound(c => c.IsFibonacci).Width(140);
-          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+          columns.Command(command => { command.Destroy(); }).Width(100);
       })
       .ToolBar(toolbar =>
       {
@@ -20,7 +19,6 @@
           toolbar.Pdf();
       })
       .ColumnMenu()
-      //.Editable(editable => editable.Mode(GridEditMode.PopUp))
       .Pageable()
       .Navigatable()
       .Selectable(selectable =>
@@ -52,7 +50,7 @@
           .WebApi()
           .Model(model => model.Id(p => p.SequenceNumberId))
           //.Read(read => read.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
-          .Read(read => read.Url("http://localhost:151/api/SequenceNumbers2"))
+          .Read(read => read.Url("http://localhost/NCS.WebAPI/api/SequenceNumbers2"))
           .Create(create => create.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2" })))
           .Update(update => update.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))
           .Destroy(destroy => destroy.Url(Url.HttpRouteUrl("Default", new { controller = "SequenceNumbers2", id = "{0}" })))

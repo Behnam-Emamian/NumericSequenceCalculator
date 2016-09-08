@@ -11,17 +11,82 @@
           </Key>
           <Property Name="SequenceNumberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Number" Type="int" Nullable="false" />
-          <Property Name="IsOdd" Type="bit" Nullable="false" />
-          <Property Name="IsEven" Type="bit" Nullable="false" />
-          <Property Name="IsMultipleBy3" Type="bit" Nullable="false" />
-          <Property Name="IsMultipleBy5" Type="bit" Nullable="false" />
-          <Property Name="IsFibonacci" Type="bit" Nullable="false" />
+          <Property Name="IsOdd" Type="bit" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IsEven" Type="bit" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IsMultipleBy3" Type="bit" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IsMultipleBy5" Type="bit" Nullable="false" StoreGeneratedPattern="Computed" />
+          <Property Name="IsFibonacci" Type="bit" Nullable="false" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCS_DB.dbo.EvenNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="EvenNumbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCS_DB.dbo.FibonacciNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FibonacciNumbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCS_DB.dbo.MultipleBy3Numbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MultipleBy3Numbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCS_DB.dbo.MultipleBy5Numbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="MultipleBy5Numbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="OddNumbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="int" Nullable="false" />
         </EntityType>
         <Function Name="SequenceNumber_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Number" Type="int" Mode="In" />
         </Function>
-        <EntityContainer Name="NCSModelStoreContainer">
+        <EntityContainer Name="PersianProcessNCSModelStoreContainer">
           <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumbers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EvenNumbers" EntityType="Self.EvenNumbers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [EvenNumbers].[Number] AS [Number]
+    FROM [dbo].[EvenNumbers] AS [EvenNumbers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FibonacciNumbers" EntityType="Self.FibonacciNumbers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [FibonacciNumbers].[Number] AS [Number]
+    FROM [dbo].[FibonacciNumbers] AS [FibonacciNumbers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MultipleBy3Numbers" EntityType="Self.MultipleBy3Numbers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MultipleBy3Numbers].[Number] AS [Number]
+    FROM [dbo].[MultipleBy3Numbers] AS [MultipleBy3Numbers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MultipleBy5Numbers" EntityType="Self.MultipleBy5Numbers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [MultipleBy5Numbers].[Number] AS [Number]
+    FROM [dbo].[MultipleBy5Numbers] AS [MultipleBy5Numbers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="OddNumbers" EntityType="Self.OddNumbers" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [OddNumbers].[Number] AS [Number]
+    FROM [dbo].[OddNumbers] AS [OddNumbers]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -33,24 +98,59 @@
           </Key>
           <Property Name="SequenceNumberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Number" Type="Int32" Nullable="false" />
-          <Property Name="IsOdd" Type="Boolean" Nullable="false" />
-          <Property Name="IsEven" Type="Boolean" Nullable="false" />
-          <Property Name="IsMultipleBy3" Type="Boolean" Nullable="false" />
-          <Property Name="IsMultipleBy5" Type="Boolean" Nullable="false" />
-          <Property Name="IsFibonacci" Type="Boolean" Nullable="false" />
+          <Property Name="IsOdd" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsEven" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsMultipleBy3" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsMultipleBy5" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="IsFibonacci" Type="Boolean" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
         </EntityType>
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="SequenceNumbers" EntityType="Self.SequenceNumber" />
           <FunctionImport Name="SequenceNumber_Insert">
-            <Parameter Name="Number" Mode="In" Type="Int32" />
+          <Parameter Name="Number" Mode="In" Type="Int32" />
           </FunctionImport>
+          <EntitySet Name="EvenNumbers" EntityType="PersianProcess.NCS.Model.EvenNumber" />
+          <EntitySet Name="FibonacciNumbers" EntityType="PersianProcess.NCS.Model.FibonacciNumber" />
+          <EntitySet Name="MultipleBy3Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy3Numbers" />
+          <EntitySet Name="MultipleBy5Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy5Numbers" />
+          <EntitySet Name="OddNumbers" EntityType="PersianProcess.NCS.Model.OddNumber" />
         </EntityContainer>
+        <EntityType Name="EvenNumber">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FibonacciNumber">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MultipleBy3Numbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MultipleBy5Numbers">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="OddNumber">
+          <Key>
+            <PropertyRef Name="Number" />
+          </Key>
+          <Property Name="Number" Type="Int32" Nullable="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="NCSModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="PersianProcessNCSModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="SequenceNumbers">
             <EntityTypeMapping TypeName="PersianProcess.NCS.Model.SequenceNumber">
               <MappingFragment StoreEntitySet="SequenceNumbers">
@@ -72,6 +172,41 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="SequenceNumber_Insert" FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert" />
+          <EntitySetMapping Name="EvenNumbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.EvenNumber">
+              <MappingFragment StoreEntitySet="EvenNumbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FibonacciNumbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.FibonacciNumber">
+              <MappingFragment StoreEntitySet="FibonacciNumbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MultipleBy3Numbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy3Numbers">
+              <MappingFragment StoreEntitySet="MultipleBy3Numbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MultipleBy5Numbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy5Numbers">
+              <MappingFragment StoreEntitySet="MultipleBy5Numbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OddNumbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.OddNumber">
+              <MappingFragment StoreEntitySet="OddNumbers">
+                <ScalarProperty Name="Number" ColumnName="Number" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
