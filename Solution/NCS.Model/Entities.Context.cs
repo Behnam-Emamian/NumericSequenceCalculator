@@ -30,8 +30,8 @@ namespace PersianProcess.NCS.Model
         public virtual DbSet<SequenceNumber> SequenceNumbers { get; set; }
         public virtual DbSet<EvenNumber> EvenNumbers { get; set; }
         public virtual DbSet<FibonacciNumber> FibonacciNumbers { get; set; }
-        public virtual DbSet<MultipleBy3Numbers> MultipleBy3Numbers { get; set; }
-        public virtual DbSet<MultipleBy5Numbers> MultipleBy5Numbers { get; set; }
+        public virtual DbSet<MultipleBy3Number> MultipleBy3Numbers { get; set; }
+        public virtual DbSet<MultipleBy5Number> MultipleBy5Numbers { get; set; }
         public virtual DbSet<OddNumber> OddNumbers { get; set; }
     
         public virtual int SequenceNumber_Insert(Nullable<int> number)
@@ -41,6 +41,15 @@ namespace PersianProcess.NCS.Model
                 new ObjectParameter("Number", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SequenceNumber_Insert", numberParameter);
+        }
+    
+        public virtual int SequenceNumber_Delete(Nullable<int> sequenceNumberId)
+        {
+            var sequenceNumberIdParameter = sequenceNumberId.HasValue ?
+                new ObjectParameter("SequenceNumberId", sequenceNumberId) :
+                new ObjectParameter("SequenceNumberId", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("SequenceNumber_Delete", sequenceNumberIdParameter);
         }
     }
 }

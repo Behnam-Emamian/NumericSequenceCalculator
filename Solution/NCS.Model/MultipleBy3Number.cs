@@ -12,7 +12,7 @@ namespace PersianProcess.NCS.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class MultipleBy5Numbers
+    public partial class MultipleBy3Number
     {
         public int Number { get; set; }
     }

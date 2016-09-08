@@ -34,7 +34,14 @@
       .Scrollable()
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.SequenceNumberId))
+          .Model(model => {
+                            model.Id(p => p.SequenceNumberId);
+                            model.Field(p => p.IsOdd).Editable(false);
+                            model.Field(p => p.IsEven).Editable(false);
+                            model.Field(p => p.IsMultipleBy3).Editable(false);
+                            model.Field(p => p.IsMultipleBy5).Editable(false);
+                            model.Field(p => p.IsFibonacci).Editable(false);
+                          })
           .Read(read => read.Action("SequenceNumbers_Read", "MVC_Kendo"))
           .Create(create => create.Action("SequenceNumbers_Create", "MVC_Kendo"))
           .Destroy(destroy => destroy.Action("SequenceNumbers_Destroy", "MVC_Kendo"))
@@ -42,4 +49,22 @@
       )
 )
 
-@Html.Partial("Odds", new Entities().OddNumbers)
+<div class="col-md-12">
+    @Html.Partial("Odds", new Entities().OddNumbers)
+</div>
+
+<div class="col-md-12">
+    @Html.Partial("Evens", new Entities().EvenNumbers)
+</div>
+
+<div class="col-md-12">
+    @Html.Partial("MultipleBy3", new Entities().MultipleBy3Numbers)
+</div>
+
+<div class="col-md-12">
+    @Html.Partial("MultipleBy5", new Entities().MultipleBy5Numbers)
+</div>
+
+<div class="col-md-12">
+    @Html.Partial("Fibonacci", new Entities().FibonacciNumbers)
+</div>

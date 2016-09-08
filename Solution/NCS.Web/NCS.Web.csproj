@@ -1320,6 +1320,10 @@
     <Content Include="Views\WebAPI_Kendo\Index.cshtml" />
     <Content Include="Views\MVC_Kendo\Index.cshtml" />
     <Content Include="Views\MVC_Kendo\Odds.cshtml" />
+    <Content Include="Views\MVC_Kendo\Evens.cshtml" />
+    <Content Include="Views\MVC_Kendo\MultipleBy3.cshtml" />
+    <Content Include="Views\MVC_Kendo\MultipleBy5.cshtml" />
+    <Content Include="Views\MVC_Kendo\Fibonacci.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
