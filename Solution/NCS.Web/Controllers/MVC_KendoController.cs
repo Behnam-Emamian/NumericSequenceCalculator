@@ -19,7 +19,7 @@ namespace PersianProcess.NCS.Web.Controllers
         public ActionResult Index()
         {
             
-            var Model = db.SequenceNumbers;
+               var Model = db.SequenceNumbers;
             return View(Model);
         }
 
@@ -63,17 +63,7 @@ namespace PersianProcess.NCS.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new SequenceNumber
-                {
-                    SequenceNumberId = sequenceNumber.SequenceNumberId,
-                    Number = sequenceNumber.Number,
-                    IsOdd = sequenceNumber.IsOdd,
-                    IsEven = sequenceNumber.IsEven,
-                    IsMultipleBy3 = sequenceNumber.IsMultipleBy3,
-                    IsMultipleBy5 = sequenceNumber.IsMultipleBy5,
-                    IsFibonacci = sequenceNumber.IsFibonacci
-                };
-
+                var entity = db.SequenceNumbers.Find(sequenceNumber.SequenceNumberId);
                 //db.SequenceNumbers.Attach(entity);
                 db.SequenceNumbers.Remove(entity);
                 db.SaveChanges();

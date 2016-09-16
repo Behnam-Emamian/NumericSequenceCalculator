@@ -1,9 +1,9 @@
 ﻿@using PersianProcess.NCS.Model
 @using System.Data.Entity
-@model DbSet<OddNumber>
+@model DbSet<EvenNumber>
 
 <ul class="list-inline">
-    <li class="">Odds</li>
+    <li class="">Evens</li>
     @foreach (var item in Model) {
       <li class="">@item.Number</li>
     }
