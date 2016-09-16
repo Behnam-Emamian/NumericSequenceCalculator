@@ -57,6 +57,9 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
           </Key>
           <Property Name="Number" Type="int" Nullable="false" />
         </EntityType>
+        <Function Name="SequenceNumber_Delete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SequenceNumberId" Type="int" Mode="In" />
+        </Function>
         <Function Name="SequenceNumber_Insert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Number" Type="int" Mode="In" />
         </Function>
@@ -111,9 +114,12 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
           </FunctionImport>
           <EntitySet Name="EvenNumbers" EntityType="PersianProcess.NCS.Model.EvenNumber" />
           <EntitySet Name="FibonacciNumbers" EntityType="PersianProcess.NCS.Model.FibonacciNumber" />
-          <EntitySet Name="MultipleBy3Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy3Numbers" />
-          <EntitySet Name="MultipleBy5Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy5Numbers" />
+          <EntitySet Name="MultipleBy3Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy3Number" />
+          <EntitySet Name="MultipleBy5Numbers" EntityType="PersianProcess.NCS.Model.MultipleBy5Number" />
           <EntitySet Name="OddNumbers" EntityType="PersianProcess.NCS.Model.OddNumber" />
+          <FunctionImport Name="SequenceNumber_Delete">
+            <Parameter Name="SequenceNumberId" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="EvenNumber">
           <Key>
@@ -127,13 +133,13 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
           </Key>
           <Property Name="Number" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="MultipleBy3Numbers">
+        <EntityType Name="MultipleBy3Number">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
           <Property Name="Number" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="MultipleBy5Numbers">
+        <EntityType Name="MultipleBy5Number">
           <Key>
             <PropertyRef Name="Number" />
           </Key>
@@ -168,6 +174,9 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
                 <InsertFunction FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Insert">
                   <ScalarProperty Name="Number" ParameterName="Number" />
                 </InsertFunction>
+                <DeleteFunction FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Delete">
+                  <ScalarProperty Name="SequenceNumberId" ParameterName="SequenceNumberId" />
+                </DeleteFunction>
               </ModificationFunctionMapping>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -187,14 +196,14 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MultipleBy3Numbers">
-            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy3Numbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy3Number">
               <MappingFragment StoreEntitySet="MultipleBy3Numbers">
                 <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="MultipleBy5Numbers">
-            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy5Numbers">
+            <EntityTypeMapping TypeName="PersianProcess.NCS.Model.MultipleBy5Number">
               <MappingFragment StoreEntitySet="MultipleBy5Numbers">
                 <ScalarProperty Name="Number" ColumnName="Number" />
               </MappingFragment>
@@ -207,6 +216,7 @@ warning 6002: The table/view 'NCS_DB.dbo.OddNumbers' does not have a primary key
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="SequenceNumber_Delete" FunctionName="PersianProcess.NCS.Model.Store.SequenceNumber_Delete" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

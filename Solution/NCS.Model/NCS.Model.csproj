@@ -73,10 +73,10 @@
     <Compile Include="FibonacciNumber.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="MultipleBy3Numbers.cs">
+    <Compile Include="MultipleBy3Number.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
-    <Compile Include="MultipleBy5Numbers.cs">
+    <Compile Include="MultipleBy5Number.cs">
       <DependentUpon>Entities.tt</DependentUpon>
     </Compile>
     <Compile Include="OddNumber.cs">

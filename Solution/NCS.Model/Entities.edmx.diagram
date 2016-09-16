@@ -7,9 +7,9 @@
       <Diagram DiagramId="e8cd046099e74945868e21ee630ea545" Name="Diagram1">
         <EntityTypeShape EntityType="PersianProcess.NCS.Model.SequenceNumber" Width="2.125" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="PersianProcess.NCS.Model.EvenNumber" Width="1.5" PointX="6.375" PointY="0.75" />
-        <EntityTypeShape EntityType="PersianProcess.NCS.Model.FibonacciNumber" Width="1.5" PointX="5.375" PointY="4.25" />
-        <EntityTypeShape EntityType="PersianProcess.NCS.Model.MultipleBy3Numbers" Width="1.5" PointX="4.375" PointY="2.5" />
-        <EntityTypeShape EntityType="PersianProcess.NCS.Model.MultipleBy5Numbers" Width="1.5" PointX="6.375" PointY="2.5" />
+        <EntityTypeShape EntityType="PersianProcess.NCS.Model.FibonacciNumber" Width="2.25" PointX="5.375" PointY="4.25" />
+        <EntityTypeShape EntityType="PersianProcess.NCS.Model.MultipleBy3Number" Width="1.875" PointX="4.375" PointY="2.5" />
+        <EntityTypeShape EntityType="PersianProcess.NCS.Model.MultipleBy5Number" Width="2.125" PointX="6.375" PointY="2.5" />
         <EntityTypeShape EntityType="PersianProcess.NCS.Model.OddNumber" Width="1.5" PointX="4.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
