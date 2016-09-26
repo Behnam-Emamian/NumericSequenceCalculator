@@ -1,0 +1,20 @@
+﻿html, body {
+    height: 100%;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.Gray {
+    color: gray;
+}
+
+.page-header {
+    margin-top: 0px;
+}
