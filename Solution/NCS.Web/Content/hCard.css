@@ -6,6 +6,12 @@ h1 {
     font-weight: bold;
 }
 
+h4 {
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+
 h5 {
     margin-bottom: 0;
     font-weight: bold;
