@@ -1,0 +1,91 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<link href="Content/hCard.css" rel="stylesheet" />
+<br />
+<div class="panel panel-default" ng-app>
+    <div class="panel-body">
+        <div class="col-md-6">
+            <h1>hCard Builder</h1>
+            <div class="page-header col-md-12">
+                <h5 class="Gray">PERSONAL DETAILS</h5>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="givenName">GIVEN NAME</label>
+                <input type="text" class="form-control" id="givenName" ng-model="givenName">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="surName">SURNAME</label>
+                <input type="text" class="form-control" id="surName" ng-model="surName">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">EMAIL</label>
+                <input type="text" class="form-control" id="email" ng-model="email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="phone">PHONE</label>
+                <input type="text" class="form-control" id="phone" ng-model="phone">
+            </div>
+            <div class="page-header col-md-12">
+                <h5 class="Gray">ADDRESS</h5>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="houseName">HOUSE NAME OR #</label>
+                <input type="text" class="form-control" id="houseName" ng-model="houseName">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="street">STREET</label>
+                <input type="text" class="form-control" id="street" ng-model="street">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="suburb">SUBURB</label>
+                <input type="text" class="form-control" id="suburb" ng-model="suburb">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="state">STATE</label>
+                <input type="text" class="form-control" id="state" ng-model="state">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="postCode">POSTCODE</label>
+                <input type="text" class="form-control" id="postCode" ng-model="postCode">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">COUNTRY</label>
+                <input type="text" class="form-control" id="country" ng-model="country">
+            </div>
+            <div class="col-md-12 text-center">
+                <button type="button" class="btn btn-primary">Create hCard</button>
+            </div>
+        </div>
+        <div class="jumbotron col-md-6">
+            <h5 class="Gray" style="text-align: right;">HCARD PREVIEW</h5>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h2>{{givenName+' '+surName}}
+                    </h2>
+                </div>
+                <div class="panel-body">
+                    <div class="page-header col-md-12">
+                        <h5 class="col-md-2">EMAIL</h5><h4 class="col-md-6">{{email}}</h4>
+                    </div>
+                    <div class="page-header col-md-12">
+                        <h5 class="col-md-2">PHONE</h5><h4 class="col-md-6">{{phone}}</h4>
+                    </div>
+                    <div class="page-header col-md-12">
+                        <h5 class="col-md-2">ADDRESS</h5><h4 class="col-md-6">{{houseName+' '+street}}</h4>
+                    </div>
+                    <div class="page-header col-md-12">
+                        <h4>{{suburb+', '+state}}</h4>
+                    </div>
+                    <div class="page-header col-md-6">
+                        <h5 class="col-md-6">POSTCODE</h5><h4 class="col-md-2">{{postCode}}</h4>
+                    </div>
+                    <div class="page-header col-md-6">
+                        <h5 class="col-md-6">COUNTRY</h5><h4 class="col-md-2">{{country}}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -29,6 +29,9 @@
 	<script src="@Url.Content("~/Scripts/kendo/2016.3.914/kendo.all.min.js")"></script>
 	<script src="@Url.Content("~/Scripts/kendo/2016.3.914/kendo.aspnetmvc.min.js")"></script>
 	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+	
+    <!--AngularJS-->
+    <script src="@Url.Content("~/Scripts/angular.min.js")"></script>
 </head>
 <body>
 
@@ -47,6 +50,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("MVC+Kendo", "Index", "MVC_Kendo")</li>
                     <li>@Html.ActionLink("WebAPI+Kendo", "Index", "WebAPI_Kendo")</li>
+                    <li>@Html.ActionLink("hCard", "Index", "hCard")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
