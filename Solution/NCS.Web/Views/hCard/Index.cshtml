@@ -13,34 +13,34 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="givenName">GIVEN NAME</label>
-                <input type="text" class="form-control" id="givenName" ng-model="givenName">
+                <input type="text" class="form-control" id="givenName" ng-model="givenName" maxlength="20">
             </div>
             <div class="form-group col-md-6">
                 <label for="surName">SURNAME</label>
-                <input type="text" class="form-control" id="surName" ng-model="surName">
+                <input type="text" class="form-control" id="surName" ng-model="surName" maxlength="20">
             </div>
             <div class="form-group col-md-6">
                 <label for="email">EMAIL</label>
-                <input type="text" class="form-control" id="email" ng-model="email">
+                <input type="email" class="form-control" id="email" ng-model="email">
             </div>
             <div class="form-group col-md-6">
                 <label for="phone">PHONE</label>
-                <input type="text" class="form-control" id="phone" ng-model="phone">
+                <input type="tel" class="form-control" id="phone" ng-model="phone">
             </div>
             <div class="page-header col-md-12">
                 <h5 class="Gray">ADDRESS</h5>
             </div>
             <div class="form-group col-md-6">
                 <label for="houseName">HOUSE NAME OR #</label>
-                <input type="text" class="form-control" id="houseName" ng-model="houseName">
+                <input type="text" class="form-control" id="houseName" ng-model="houseName" maxlength="20">
             </div>
             <div class="form-group col-md-6">
                 <label for="street">STREET</label>
-                <input type="text" class="form-control" id="street" ng-model="street">
+                <input type="text" class="form-control" id="street" ng-model="street" maxlength="20">
             </div>
             <div class="form-group col-md-6">
                 <label for="suburb">SUBURB</label>
-                <input type="text" class="form-control" id="suburb" ng-model="suburb">
+                <input type="text" class="form-control" id="suburb" ng-model="suburb" maxlength="20">
             </div>
             <div class="form-group col-md-6">
                 <label for="state">STATE</label>
@@ -48,7 +48,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="postCode">POSTCODE</label>
-                <input type="text" class="form-control" id="postCode" ng-model="postCode">
+                <input type="number" class="form-control" id="postCode" ng-model="postCode" min="1111" max="9999">
             </div>
             <div class="form-group col-md-6">
                 <label for="country">COUNTRY</label>
@@ -61,7 +61,7 @@
         <div class="jumbotron col-md-6">
             <h5 class="Gray" style="text-align: right;">HCARD PREVIEW</h5>
             <div class="panel panel-primary">
-                <div class="panel-heading">
+                <div class="panel-heading" style="height:84px;">
                     <h2>{{givenName+' '+surName}}
                     </h2>
                 </div>
@@ -76,7 +76,7 @@
                         <h5 class="col-md-2">ADDRESS</h5><h4 class="col-md-6">{{houseName+' '+street}}</h4>
                     </div>
                     <div class="page-header col-md-12">
-                        <h4>{{suburb+', '+state}}</h4>
+                        <h5 class="col-md-2"></h5><h4 class="col-md-6">{{suburb+', '+state}}</h4>
                     </div>
                     <div class="page-header col-md-6">
                         <h5 class="col-md-6">POSTCODE</h5><h4 class="col-md-2">{{postCode}}</h4>
